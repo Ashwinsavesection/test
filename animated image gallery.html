@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: rgb(16, 23, 42);
+        }
+        .container{
+            width: 100vw;
+            height: 500px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            column-gap: 30px;
+        }
+        .img{
+            height: 297px;
+            width: 200px;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: perspective(500px) rotateY(20deg);
+        }
+        .container:hover .img {
+            opacity: 0.3;
+        }
+        .container .img:hover {
+            transform: perspective(500px) rotateY(0deg);
+            transition: 0.5s;
+            opacity: 1;
+            transform: scale(1.5);
+            z-index: 1;
+        }
+        .img-1{
+            background-image: url(images/purple.png);
+        }
+
+        .img-2{
+            background-image: url(images/6.jpg);
+        }
+        .img-3{
+            background-image: url(images/7.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img img-1"></div>
+        <div class="img img-2"></div>
+        <div class="img img-3"></div>
+    </div>
+</body>
+</html>
